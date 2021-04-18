@@ -14,15 +14,8 @@ app.all('*', (req, res, next) => {
 app.use(cors())
 app.options('*', cors())
 app.disable('x-powered-by')
-app.use(express.json({
-	limit: '10mb',
-	parameterLimit: 1000000
-})) // 1024*1024*5 support json encoded bodies
-app.use(express.urlencoded({
-	extended: true,
-	limit: '10mb',
-	parameterLimit: 1000000,
-}))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 app.use(meetingsRouter)
 
