@@ -15,7 +15,7 @@ const sendEmail = (name, to, id) => {
         to,
         subject: 'Meeting Invitation',
         text: `${name} is inviting you to a Blackbox meeting.
-        meeting link: https://backend-fjkv.onrender.com//meet/${id}`
+        meeting link: https://backend-fjkv.onrender.com/meet/${id}`
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
